@@ -21,6 +21,10 @@ mongoose.connection
     console.log("Error while connecting to the database");
   });
 
+app.get("/", (req, res) => {
+  res.send("server is connected and updated");
+});
+
 app.listen(port, () => {
   console.log(`server sucessfully created on port ${port}`);
 });
